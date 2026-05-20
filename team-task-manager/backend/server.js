@@ -41,6 +41,10 @@ app.use((err, req, res, next) => {
 
 // Database Connection & Server Start
 const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/team-task-manager';
 
 mongoose.connect(MONGODB_URI)
