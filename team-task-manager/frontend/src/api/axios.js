@@ -4,7 +4,7 @@ import axios from 'react';
 import axiosDefault from 'axios';
 
 const api = axiosDefault.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'import.meta.env.VITE_API_URL',
 });
 
 api.interceptors.response.use(
