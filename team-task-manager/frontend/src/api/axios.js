@@ -1,10 +1,8 @@
-import axios from 'react';
-
 // Using a module default import to handle the fact that we installed axios
 import axiosDefault from 'axios';
 
 const api = axiosDefault.create({
-  baseURL: 'import.meta.env.VITE_API_URL',
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 api.interceptors.response.use(
