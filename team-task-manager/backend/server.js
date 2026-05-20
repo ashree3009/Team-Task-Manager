@@ -17,6 +17,10 @@ app.use(cors({
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.get("/", (req, res) => {
+  res.send("Team Task Manager Backend is Running");
+});
+
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
